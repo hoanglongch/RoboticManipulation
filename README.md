@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # PERCEPTION_SYSTEM_PLATFORM
 
 
@@ -48,35 +48,5 @@ TensorRT, as the ESS DNN model is designed with optimizations supported by Tenso
 
 This package is powered by [NVIDIA Isaac Transport for ROS (NITROS)](https://developer.nvidia.com/blog/improve-perception-performance-for-ros-2-applications-with-nvidia-isaac-transport-for-ros/), which leverages type adaptation and negotiation to optimize message formats and dramatically accelerate communication between participating nodes.
 
-## Performance
 
-| Sample Graph<br/><br/>                                                                                                                                                                                | Input Size<br/><br/>     | AGX Orin<br/><br/>                                                                                                                                                | Orin NX<br/><br/>                                                                                                                                                | x86_64 w/ RTX 4090<br/><br/>                                                                                                                                       |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [DNN Stereo Disparity Node](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/benchmarks/isaac_ros_ess_benchmark/scripts/isaac_ros_ess_node.py)<br/><br/><br/>Full<br/><br/>          | 576p<br/><br/><br/><br/> | [72.5 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_ess_node-agx_orin.json)<br/><br/><br/>17 ms @ 30Hz<br/><br/>       | [42.1 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_ess_node-orin_nx.json)<br/><br/><br/>26 ms @ 30Hz<br/><br/>       | [350 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_ess_node-x86-4090.json)<br/><br/><br/>2.1 ms @ 30Hz<br/><br/>        |
-| [DNN Stereo Disparity Node](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/benchmarks/isaac_ros_ess_benchmark/scripts/isaac_ros_light_ess_node.py)<br/><br/><br/>Light<br/><br/>   | 288p<br/><br/><br/><br/> | [304 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_light_ess_node-agx_orin.json)<br/><br/><br/>5.9 ms @ 30Hz<br/><br/> | [143 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_light_ess_node-orin_nx.json)<br/><br/><br/>9.6 ms @ 30Hz<br/><br/> | [350 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_light_ess_node-x86-4090.json)<br/><br/><br/>1.6 ms @ 30Hz<br/><br/>  |
-| [DNN Stereo Disparity Graph](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/benchmarks/isaac_ros_ess_benchmark/scripts/isaac_ros_ess_graph.py)<br/><br/><br/>Full<br/><br/>        | 576p<br/><br/><br/><br/> | [89.8 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_ess_graph-agx_orin.json)<br/><br/><br/>19 ms @ 30Hz<br/><br/>      | [35.2 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_ess_graph-orin_nx.json)<br/><br/><br/>34 ms @ 30Hz<br/><br/>      | [350 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_ess_graph-x86-4090.json)<br/><br/><br/>5.8 ms @ 30Hz<br/><br/>       |
-| [DNN Stereo Disparity Graph](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/benchmarks/isaac_ros_ess_benchmark/scripts/isaac_ros_light_ess_graph.py)<br/><br/><br/>Light<br/><br/> | 288p<br/><br/><br/><br/> | [184 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_light_ess_graph-agx_orin.json)<br/><br/><br/>14 ms @ 30Hz<br/><br/> | [128 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_light_ess_graph-orin_nx.json)<br/><br/><br/>14 ms @ 30Hz<br/><br/> | [350 fps](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_benchmark/blob/main/results/isaac_ros_light_ess_graph-x86-4090.json)<br/><br/><br/>5.2 ms @ 30Hz<br/><br/> |
 
----
-
-## Documentation
-
-Please visit the [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_dnn_stereo_depth/index.html) to learn how to use this repository.
-
----
-
-## Packages
-
-* [`isaac_ros_ess`](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_dnn_stereo_depth/isaac_ros_ess/index.html)
-  * [Quickstart](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_dnn_stereo_depth/isaac_ros_ess/index.html#quickstart)
-  * [Try More Examples](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_dnn_stereo_depth/isaac_ros_ess/index.html#try-more-examples)
-  * [Troubleshooting](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_dnn_stereo_depth/isaac_ros_ess/index.html#troubleshooting)
-  * [API](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_dnn_stereo_depth/isaac_ros_ess/index.html#api)
-
-## Latest
-
-Update 2024-09-26: Updated for ESS 4.1 trained on additional samples
-=======
-# RoboticManipulation
-Robotic Manipulation Framework 
->>>>>>> origin/main
