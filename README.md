@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PERCEPTION_SYSTEM_PLATFORM
 
 
@@ -75,3 +76,7 @@ Please visit the [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/re
 ## Latest
 
 Update 2024-09-26: Updated for ESS 4.1 trained on additional samples
+=======
+# RoboticManipulation
+Robotic Manipulation Framework 
+>>>>>>> origin/main
