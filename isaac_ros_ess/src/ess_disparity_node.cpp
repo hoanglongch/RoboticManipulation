@@ -263,5 +263,5 @@ ESSDisparityNode::~ESSDisparityNode() {}
 }  // namespace isaac_ros
 }  // namespace nvidia
 
-// Register as a component
+
 RCLCPP_COMPONENTS_REGISTER_NODE(nvidia::isaac_ros::dnn_stereo_depth::ESSDisparityNode)
