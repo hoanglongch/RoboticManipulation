@@ -47,5 +47,6 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "D:/Project/Perception_System_Platform/gxf_isaac_ess"
 }

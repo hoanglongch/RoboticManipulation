@@ -52,8 +52,8 @@ This package is powered by [NVIDIA Isaac Transport for ROS (NITROS)](https://dev
 ---
 ## Demonstration
 
-![Semantic segmentation](Resources/semantic.png)
-![Semantic 2](Resources/2.png)
+![Semantic 1](Resources/semantic.png)
+![Semantic 2](Resources/image.png)
 
 
 
