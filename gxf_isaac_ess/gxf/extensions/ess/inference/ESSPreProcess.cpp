@@ -1,3 +1,6 @@
+// Implements stereo image preprocessing, including resizing, normalization, and color conversion, 
+// all using CUDA.
+
 #include <algorithm>
 #include <stdexcept>
 
