@@ -1,3 +1,4 @@
+// Core logic for the ESS (Efficient Stereo Supervision) inference, including CUDA-based execution and tensor management.
 #include "extensions/ess/inference/ESS.h"
 
 #include <cuda_runtime_api.h>
@@ -165,10 +166,10 @@ struct ESS::ESSImpl {
     }
 
     // Getters for output dimensions
-    size_t getModelOutputHeight() {
+    size_t getModelOutputHeight() const {
         return m_networkOutputHeight;
     }
-    size_t getModelOutputWidth() {
+    size_t getModelOutputWidth() const {
         return m_networkOutputWidth;
     }
 
