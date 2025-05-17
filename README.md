@@ -1,12 +1,6 @@
 
 # PERCEPTION_SYSTEM_PLATFORM
 
-
-<div align="center"><a class="reference internal image-reference" href="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/main/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_dnn_stereo_depth/ess3.0_conf0_r2b_storage_576p.gif/"><img alt="image" src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/main/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_dnn_stereo_depth/ess3.0_conf0_r2b_storage_576p.gif/" width="800px"/></a></div>
-
----
-
-
 ## Overview
 
 The vision depth perception problem is generally useful in many fields of robotics such as estimating
@@ -54,8 +48,4 @@ This package is powered by [NVIDIA Isaac Transport for ROS (NITROS)](https://dev
 
 ![Semantic 1](Resources/semantic.png)
 ![Semantic 2](Resources/image.png)
-
-
-
-
 
