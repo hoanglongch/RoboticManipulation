@@ -447,3 +447,13 @@ components:
 - type: nvidia::gxf::JobStatistics
   parameters:
     clock: clock
+
+
+#This YAML file defines the GXF (Graph eXecution Framework) application graph for the ESS stereo disparity 
+# estimation pipeline. It specifies all the components, memory pools, CUDA streams, and their parameters needed 
+#to process synchronized stereo images, run deep-learned inference, apply confidence thresholding, compose 
+#disparity outputs, and relay results to ROS 2 topics. The configuration includes detailed data flow connections 
+#between receivers, transmitters, and processing nodes, ensuring efficient scheduling and memory management. 
+#This file acts as the blueprint for how image data moves through the system—from camera input, through neural 
+#network inference and post-processing, to final output—enabling real-time, GPU-accelerated depth estimation for 
+#robotics applications.

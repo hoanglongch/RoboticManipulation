@@ -265,3 +265,13 @@ ESSDisparityNode::~ESSDisparityNode() {}
 
 
 RCLCPP_COMPONENTS_REGISTER_NODE(nvidia::isaac_ros::dnn_stereo_depth::ESSDisparityNode)
+
+/*
+This file implements the ESSDisparityNode, a ROS 2 node that serves as the main entry point for
+deep-learned stereo disparity estimation pipeline within the Isaac ROS ecosystem. The node configures 
+input and output topics, loads required GXF extensions, manages parameters for the underlying inference engine, 
+and sets up the processing graph for stereo image rectification and disparity computation. It ensures all 
+necessary plugins and model files are available, registers supported message types, and forwards configuration 
+parameters to the GXF graph. This node enables efficient, real-time stereo depth estimation for robotics 
+applications by bridging ROS 2 and accelerated inference infrastructure.
+*/

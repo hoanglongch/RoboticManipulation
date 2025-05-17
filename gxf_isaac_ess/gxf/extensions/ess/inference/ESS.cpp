@@ -279,3 +279,13 @@ size_t ESS::getModelOutputWidth() {
 }  // namespace ess
 }  // namespace isaac
 }  // namespace nvidia
+
+/*
+This file implements the core logic for the ESS (Efficient Supervised Stereo) inference engine. 
+It manages the entire stereo depth estimation process, including preprocessing input images, running 
+inference using a TensorRT-accelerated neural network, and producing both disparity and confidence 
+maps. The code supports both raw and preprocessed image inputs, handles GPU memory and CUDA streams, 
+and ensures all input and output tensors match the expected dimensions and batch sizes. By encapsulating 
+the setup, execution, and resource management for stereo inference, this file serves as the computational 
+backbone for generating depth information from stereo camera images in real time.
+*/

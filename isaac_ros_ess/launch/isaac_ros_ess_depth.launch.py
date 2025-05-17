@@ -4,8 +4,8 @@ from launch.substitutions import LaunchConfiguration, PythonExpression
 from launch_ros.actions import ComposableNodeContainer
 from launch_ros.descriptions import ComposableNode
 
-
 def generate_launch_description():
+    # Declare launch arguments for camera namespace, engine file, and threshold
     camera = LaunchConfiguration('camera')
     camera_arg = DeclareLaunchArgument(
         'camera',
@@ -24,12 +24,14 @@ def generate_launch_description():
         default_value='0.0',
         description='Threshold value ranges between 0.0 and 1.0 '
                     'for filtering disparity with confidence.')
+    # Collect all launch arguments
     launch_args = [
         camera_arg,
         engine_file_path_arg,
         threshold_arg,
     ]
 
+    # Define topic names for left/right images and camera info, using the camera namespace
     left_image_topic = PythonExpression(["'/' + '", camera, "' + '/left/image_compressed'"])
     left_info_topic = PythonExpression(["'/' + '", camera, "' + '/left/camera_info'"])
     right_image_topic = PythonExpression(["'/' + '", camera, "' + '/right/image_compressed'"])
@@ -37,6 +39,7 @@ def generate_launch_description():
     left_raw_image_topic = PythonExpression(["'/' + '", camera, "' + '/left/image_raw'"])
     right_raw_image_topic = PythonExpression(["'/' + '", camera, "' + '/right/image_raw'"])
 
+    # Node to decode H264-compressed left camera images
     left_decoder = ComposableNode(
         name='left_decoder',
         package='isaac_ros_h264_decoder',
@@ -48,6 +51,7 @@ def generate_launch_description():
         ],
     )
 
+    # Node to decode H264-compressed right camera images
     right_decoder = ComposableNode(
         name='right_decoder',
         package='isaac_ros_h264_decoder',
@@ -59,6 +63,7 @@ def generate_launch_description():
         ],
     )
 
+    # Node to rectify (undistort and align) left camera images
     left_rectify_node = ComposableNode(
         name='left_rectify_node',
         package='isaac_ros_image_proc',
@@ -76,6 +81,7 @@ def generate_launch_description():
         ]
     )
 
+    # Node to rectify right camera images
     right_rectify_node = ComposableNode(
         name='right_rectify_node',
         package='isaac_ros_image_proc',
@@ -93,6 +99,7 @@ def generate_launch_description():
         ]
     )
 
+    # Node for stereo disparity estimation using the ESS neural network
     disparity_node = ComposableNode(
         name='disparity',
         package='isaac_ros_ess',
@@ -112,12 +119,14 @@ def generate_launch_description():
         ]
     )
 
+    # Node to convert disparity images to depth images
     disparity_to_depth_node = ComposableNode(
         name='DisparityToDepthNode',
         package='isaac_ros_stereo_image_proc',
         plugin='nvidia::isaac_ros::stereo_image_proc::DisparityToDepthNode',
     )
 
+    # Container to launch all composable nodes in a single process for efficiency
     container = ComposableNodeContainer(
         name='depth_container',
         namespace='depth',
@@ -134,4 +143,13 @@ def generate_launch_description():
         output='screen'
     )
 
+    # Return the launch description with all arguments and the container
     return (LaunchDescription(launch_args + [container]))
+
+'''
+This launch file orchestrates the full stereo depth estimation pipeline in ROS 2 using NVIDIA Isaac ROS components. 
+It declares launch arguments for camera namespace, engine file, and confidence threshold, then sets up nodes for 
+decoding compressed camera images, rectifying them, running deep-learned stereo disparity estimation, and converting 
+the resulting disparity map to a depth image. All nodes are launched together in a composable node container for efficient 
+execution. The file enables flexible, real-time deployment of stereo vision-based depth perception for robotics applications.
+'''

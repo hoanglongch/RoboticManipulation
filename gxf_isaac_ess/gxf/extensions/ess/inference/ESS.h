@@ -165,3 +165,13 @@ class CVCORE_API ESSPostProcessor {
 }  // namespace ess
 }  // namespace isaac
 }  // namespace nvidia
+
+/*
+This header file defines the core C++ interfaces and data structures for the (ESS) inference pipeline. 
+It provides class declarations for the main ESS model, including preprocessing (ESSPreProcessor), 
+inference (ESS), and post-processing (ESSPostProcessor). These classes manage the conversion of raw 
+stereo images into network-ready tensors, execute the neural network to produce disparity and confidence 
+maps, and resize or scale the output as needed. The file also defines supporting types, parameters, and 
+configuration structures, enabling flexible and efficient stereo depth estimation using CUDA and TensorRT 
+on NVIDIA hardware.
+*/

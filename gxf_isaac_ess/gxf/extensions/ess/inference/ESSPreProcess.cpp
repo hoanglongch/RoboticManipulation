@@ -199,3 +199,13 @@ ESSPreProcessor::~ESSPreProcessor() {}
 }  // namespace ess
 }  // namespace isaac
 }  // namespace nvidia
+
+/*
+This file implements the stereo image preprocessing pipeline for the ESS (Efficient Supervised Stereo) 
+depth estimation system. It prepares left and right camera images for neural network inference by performing 
+a series of GPU-accelerated operations, including resizing or crop-and-resize, optional color channel conversion 
+(BGR to RGB), normalization using provided mean and standard deviation values, and conversion from interleaved 
+to planar tensor format. The code ensures all input and output tensors are valid and compatible with the network's 
+requirements. This preprocessing is essential for ensuring that the stereo images are in the correct format and 
+quality for accurate and efficient depth estimation on NVIDIA hardware.
+*/
